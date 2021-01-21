@@ -15,11 +15,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('products','ProductContrlloer@index')->name('products.index');
 Route::get('products/create','ProductContrlloer@create')->name('products.create');
 Route::post('products/store','ProductContrlloer@store')->name('products.store');
-Route::delete('products/destroy','ProductContrlloer@destroy')->name('products.destroy');
+Route::delete('products/destroy/{id}','ProductContrlloer@destroy')->name('products.destroy');
 // Route::post('products/delete','ProductContrlloer@delete')->name('products.delete');
 Route::put('products/update','ProductContrlloer@update')->name('products.update');
-Route::get('products/show','ProductContrlloer@show')->name('products.show');
-Route::get('products/edit','ProductContrlloer@edit')->name('products.edit');
+Route::get('products/show/{id}','ProductContrlloer@show')->name('products.show');
+Route::get('products/edit/{id}','ProductContrlloer@edit')->name('products.edit');
 
 
 
